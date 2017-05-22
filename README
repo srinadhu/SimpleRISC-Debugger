@@ -1,0 +1,46 @@
+================================================
+Debugger for simpleRISC programs
+================================================
+
+README
+
+Table of contents
+1. Directory Structure
+2. How to build
+3. How to execute
+
+Directory Structure:
+--------------------
+CS211-Project
+  |
+  |- bin
+      |
+  |- doc
+      |
+  |- include
+      |- mySimpleSim.h
+  |- src
+      |- main.cpp
+      |- Makefile
+      |- mySimpleSim.cpp
+  |- test
+      |
+      |- fibonacci.txt
+      |- parity.txt
+      |- power.txt
+      |- array_sum.txt
+      |- foo.txt
+      |- simple_add.mem
+      |- sum.txt
+      |- ReadME_test_Cases
+
+How to build
+------------
+For building:
+	$cd src
+	$make
+
+For cleaning the project:
+	$cd src
+	$make clean
+

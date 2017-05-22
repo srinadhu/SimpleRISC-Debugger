@@ -1,2 +1,0 @@
-# SimpleRISC-Debugger
-SimpleRISC Debugger
