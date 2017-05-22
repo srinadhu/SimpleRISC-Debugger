@@ -1,0 +1,9 @@
+Design and implement a comand line Debugger for SimpleRisc Programs with following functionalities:
+
+1.load prog.mem     //this should load prog.mem on memory 
+2.run               //should run from the begining
+3.break <address>   //should set the breakpoint at memory address given by user
+4.continue          //run from the current instruction till the breakpoint is hit, or till end of execution
+5.step              //execute one instruction
+6.print r <number>   //print the content of a register
+7.print m <address> //print the content of memory location
