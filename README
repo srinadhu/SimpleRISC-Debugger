@@ -44,3 +44,47 @@ For cleaning the project:
 	$cd src
 	$make clean
 
+1. What our program is doing?
+	
+	After making and running,in the terminal 'gdb>' will be waiting to  be given some invocation if 'load filename' is given it will load the file into memory of program(i.e assumption of simpleRisc a large array of bytes) if respective file is in working directory.By using 'break add' where add in hexadecimal format will set a breakpoint at that address in loaded program and if after this run is invocated it will stop 	at that breakpoint and if 'continue' is invocated it will run till next breakpoint or till end if no breakpoint is there.'step' will run one instruction and then stop. 'print r rg' will print respective register(rg) value and 'print m ads' will print instruction at address(ads).By writing input as 'Quit()',you will exit out of debugger.Without loading a file except 'Quit()' nothing makes sense and 'Quit()' remains same.
+
+        So looking at invocations and what they are doing:
+		      load prog.mem     -loads prog.mem on memory 
+        	run               -run from the begining and stop at breakpoint if any.
+        	break <address>   -sets the breakpoint at memory address given by user
+        	continue          -run from the current instruction till the breakpoint is hit, or till end of execution
+        	step              -execute one instruction
+        	print r <number>  -print's the content of a register
+        	print m <address> -print's the content of memory location
+	
+	
+2. Limitations/bugs in the code:
+
+	1.if very large of number of instructions are there it might lead to incorrect results or segmentation faults as with memory constraints
+	(an issue wth basic assumption of SimpleRisc and practically available memory in a system i.e theoritical vs practical). 
+	2.A simple Debugger with limited number of invocations.
+
+3. How to compile ?
+	 $cd src
+	 $make
+
+4. How to use/run ?
+	 $cd -
+	 $cd test
+	 $./mySimpleSim           
+   
+   //for cleaning
+   $cd -
+	 $cd src
+	 $make clean
+
+5. How output looks like ?
+
+	There are two print invoactions those can be done which outputs either register value or insrtuction at memory location and  'gdb>' will keep appearing in new line till you exit out of debugger.
+  
+Developed by
+Sai Srinadhu K (email: 2015csb1015@iitrpr.ac.in)
+Kesav Garg (email: 2015csb1016@iitrpr.ac.in)
+
+Supervised by
+Dr. Neeraj Goel (email: neeraj@iitrpr.ac.in)
